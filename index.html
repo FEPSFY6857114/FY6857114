@@ -125,6 +125,23 @@ p.ex1 {
   const d = new Date();
   document.getElementById("date&time").innerHTML= d;
 </script>
+<html>
+<head>
+  <title>Change Button Colour</title>
+</head>
+<body>
+  <button id="colorbutton">Click me to Change Colour</button>
+<script>
+  var button=document.getElementById("colorButton");
+
+  function changeColor() {
+    var randomColor="#" + Math.floorr(Math.random()*16777215).toString(16);
+    button.style.background = randomColor;
+  }
+  button.addEventListener("click", changeColor);
+  </script>
+</body>
+</html>
   <h3 id="References">References</h3>
 
   <p>
