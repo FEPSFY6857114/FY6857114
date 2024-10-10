@@ -144,7 +144,7 @@ p.ex1 {
 </html>
 <head>
   <title>My Daily Activites</title>
-  <script> type="text/javascript" src=https://www.gstatic.com/charts/loader.js</script>
+  <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
 </head>
 <body>
   <div id="chart_div"></div>
@@ -163,7 +163,7 @@ p.ex1 {
             var options = {
               title:'My Daily Activites'
             };
-            var chart = new google.visualization.PieChart(document.getElementById('chart-div'));
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
             chart.draw(data,options);
           }
            </script>
