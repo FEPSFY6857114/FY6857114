@@ -139,61 +139,6 @@ table, th, td {
   <pre>
     INSERT REFERENCES HERE
   </pre>
-<head>
-  <title>My Daily Activites</title>
-  <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
-</head>
-<body>
-  <div id="chart_div"></div>
-  <script type="text/javascript">
-           google.charts.load('current',{'packages':['corechart']});
-           google.charts.setOnLoadCallback(drawChart);
-          function drawChart() {
-            var data=google.visualization.arrayToDataTable([
-              ['Task','Hours Per Day'],
-              ['Work',8],
-              ['Sleep',8],
-              ['Eat',2],
-              ['Study',4],
-              ['Exercise',2]
-              ]);
-            var options = {
-              title:'My Daily Activites'
-            };
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data,options);
-          }
-           </script>
-</body>
-<body>
-  <div id="scatter_div"></div>
-  <script type="text/javascript">
-    google.charts.load('current',{'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart(){
-    var data= new google.visualization.DataTable();
-    data.addColumn('number','Age');
-    data.addColumn('number','Salary');
-
-    data.addRows([
-    [25,40000],
-    [30,50000],
-    [35,60000],
-    [40,75000],
-    [45,80000],
-    [50,90000]
-    ]);
-    var options = {
-     title: 'Age vs Salary',
-    hAxis:{title:'Age'},
-    vAxis:{title:'Salary'}
-    };
-    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-    chart.draw(data,options);
-    }
-  </script>
-</body>
-    
     <h3 id="References">References</h3>
 
   <p>
