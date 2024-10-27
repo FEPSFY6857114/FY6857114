@@ -23,7 +23,7 @@
       
       td, th {
         border: 1px solid #9BEED5;
-        test-align: left;
+        text-align: left;
         padding: 8px;
       }
 
@@ -74,39 +74,16 @@
     <p style="background-color:#FFAFE7; class="ex1">
     <pre>
       INSERT ANALYSIS AND DISCUSSION HERE
-<head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+      <hr>
+     <style>
+       table{
+         font-family: arial, sans-serif;
+            border-collapse: collapse;
+            "text-align:center"
+            width: 50%;
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Spin Parameter (a)', 'Sales', 'Expenses'],
-          ['0.1',  1000,      400],
-          ['0.2',  1170,      460],
-          ['0.3',  660,       1120],
-          ['0.4',  1030,      540],
-          ['0.5', 777,        770],
-          ['0.6', 678,        667],
-        ]);
-
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-  </body>
-
+         
+     </style> 
       
     </pre>
   </p>
