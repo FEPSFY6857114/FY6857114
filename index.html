@@ -217,7 +217,7 @@ table, th, td {
   (Accessed: 20 October 2024)
     </pre>
   </p>
-     <div id="last-updated">Loading last update time...</div>
+<div id="last-updated">Loading last update time...</div>
 
 <!--Verify Button -->
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
@@ -242,12 +242,12 @@ table, th, td {
         throw new Error('Error fetching data: ${response.status} - $(response.statusText}');
       }
       const commits = await response.json();
-      if (commits && commits.length >0) {
+      if (commits && commits.length > 0) {
         const lastCommitDate = new Date(commits[0].commit.committer.date);
 
            //Displaying the time on load
         document.getElementbyId('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLocaleString()}';
-      }else{
+      } else {
         document.getElementById('last-updated').innerText = 'No commits found in the repository.';
       }
     } catch (error) {
