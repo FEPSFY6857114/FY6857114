@@ -57,6 +57,30 @@
     </tr>
   </table>
 <hr>
+   <p id="totalWordCount"></p>
+     <hr>
+     <script>
+    //Function to calculate and display word count for a specified section
+       function displayWordCount(sectionId, outputId) {
+         // Get the text content from the specified section
+         const text = document.getElementById(sectionId).textContent;
+
+         // Split text into words based on spaces and dilter out an empty strings
+         const wordArray = text.trim().split(/\s+/);
+         //Count the words
+         const wordCount = wordArray.length;
+         return wordCount;
+       }
+       function displayTotalWordCount() {
+         const IntroductionCount = displayWordCount("Introduction_InText");
+         const AnalysisCount = displayWordCount("Analysis_InText");
+         const ConclusionCount = displayWordCount("Conclusion_InText");
+         const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
+         //Display the total word count
+         document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
+       }
+       window.onload = displayTotalWordCount; 
+     </script>
   <h3 style=background-color:#9BEED5; id="Abstract">Abstract</h3>
   </p>
   <p class="ex1">
@@ -69,7 +93,7 @@
   </pre>
   </p>
     <h3 style=background-color:#9BEED5; id="Introduction">Introduction</h3>
-  <pre id="Introduction_InText">
+  <pre id="Introduction_InText"></pre>
     </p>
     <p class="ex1">
     <pre>
@@ -81,7 +105,7 @@
     </pre>
     </p>
     <h3 style=background-color:#9BEED5; id="Analysis and discussion">Analysis and discussion</h3>
-       <p id="Analysis_InText">
+       <p id="Analysis_InText"></p>
     </p>
     <p class="ex1">
       <pre>
@@ -180,7 +204,7 @@ table, th, td {
 </p>
 </p>
     <h3 style=background-color:#9BEED5; id="Conclusion">Conclusion</h3>
-    <p id="Conclusion_InText">
+    <p id="Conclusion_InText"></p>
     </p>
     <p class="ex1">
       <pre>
@@ -281,29 +305,4 @@ table, th, td {
   (Accessed: 20 October 2024)
     </pre>
   </p>
-<!--Placeholder for total word count -->
-     <p id="totalWordCount"></p>
-     <hr>
-     <script>
-    //Function to calculate and display word count for a specified section
-       function displayWordCount(sectionId, outputId) {
-         // Get the text content from the specified section
-         const text = document.getElementById(sectionId).textContent;
-
-         // Split text into words based on spaces and dilter out an empty strings
-         const wordArray = text.trim().split(/\s+/);
-         //Count the words
-         const wordCount = wordArray.length;
-         return wordCount;
-       }
-       function displayTotalWordCount() {
-         const IntroductionCount = displayWordCount("Introduction_InText");
-         const AnalysisCount = displayWordCount("Analysis_InText");
-         const ConclusionCount = displayWordCount("Conclusion_InText");
-         const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
-         //Display the total word count
-         document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
-       }
-       window.onload = displayTotalWordCount; 
-     </script>
 </html>
